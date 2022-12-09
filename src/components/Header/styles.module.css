@@ -1,0 +1,17 @@
+.HeaderWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+}
+.HeaderImg {
+  height: 4rem;
+}
+.HeaderNav {
+  font-size: 1.5rem;
+}
+.HeaderNav a {
+  padding-left: 3rem;
+}
+.HeaderNav a:hover {
+  text-decoration: underline;
+}
