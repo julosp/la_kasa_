@@ -6,16 +6,18 @@ import "./index.css";
 import "./assets/fonts/Montserrat-VariableFont_wght.ttf";
 
 import Home from "./pages/Home";
-import Teste from "./pages/Teste";
+import Logement from "./pages/Logement";
+import AboutUs from "./pages/About";
 import Error from "./components/Error";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<Error />} />
         <Route index element={<Home />} />
-        <Route path="teste" element={<Teste />} />
+        <Route path="logement" element={<Logement />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

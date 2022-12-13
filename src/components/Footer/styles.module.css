@@ -1,0 +1,17 @@
+.FooterWrap {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FooterImg {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  width: 6rem;
+}
+
+.FooterText {
+  color: white;
+  margin-bottom: 2rem;
+}
