@@ -1,0 +1,23 @@
+.errorWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.errorTitle {
+  color: #ff6060;
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.errorText {
+  color: #ff6060;
+  font-size: 2.2rem;
+  margin-bottom: 5rem;
+}
+
+.errorLink {
+  font-size: 1.3rem;
+  margin-bottom: 5rem;
+}

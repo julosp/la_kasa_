@@ -1,0 +1,26 @@
+.TitleWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.395);
+}
+
+.TitleImg {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 2rem;
+}
+
+.TitleText {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
