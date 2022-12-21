@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import styles from "../../components/Collapse/styles.module.css"
-import arrow from "../../assets/img/arrow.png"
+import styles from "../../components/Collapse/styles.module.css";
+import arrow from "../../assets/img/arrow.png";
 
 function Collapse(props) {
   const title = props.title;
@@ -13,7 +13,7 @@ function Collapse(props) {
   const refHeight = useRef();
 
   useEffect(() => {
-    setHeightEl(`${refHeight.current.scrollHeight}px`);
+    setHeightEl(`${refHeight.current.scrollHeight}%`);
   }, []);
 
   const toggleState = () => {
@@ -23,20 +23,19 @@ function Collapse(props) {
   return (
     <div className={styles.collapseWrap}>
       <button className={styles.collapseVisible} onClick={toggleState}>
-        <span>test</span>
-        <img src={arrow} alt="arrow" className={toggle && "active"}/>
+        <span>{title}</span>
+        <img src={arrow} alt="arrow" className={toggle && `${styles.active}`} />
       </button>
       <div
-        className={toggle ? `${styles.collapseToggle} ${styles.animated}` : `${styles.collapseToggle}`}
+        className={
+          toggle
+            ? `${styles.collapseToggle} ${styles.animated}`
+            : `${styles.collapseToggle}`
+        }
         style={{ height: toggle ? `${heightEl}` : "0px" }}
         ref={refHeight}
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nobis
-          quaerat quis deleniti perspiciatis magni sequi in laborum? Pariatur,
-          aperiam! Illum ullam id provident veritatis eveniet tempore laborum
-          dolor consequatur?
-        </p>
+        <p>{text}</p>
       </div>
     </div>
   );
