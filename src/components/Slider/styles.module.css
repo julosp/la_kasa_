@@ -1,0 +1,53 @@
+.carouselWrap {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.carouselInner {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.carouselInner .leftArrow {
+  cursor: pointer;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.carouselInner .rightArrow {
+  cursor: pointer;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.carouselInner .leftArrow img {
+  transform: rotate(90deg);
+  width: 5.5rem;
+}
+
+.carouselInner .rightArrow img {
+  transform: rotate(-90deg);
+  width: 5.5rem;
+}
+
+.carouselCounter {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  align-content: flex-end;
+  color: white;
+}
+
+.carouselCounter p {
+  font-size: 20px;
+}
