@@ -32,8 +32,14 @@ function Logement() {
           picture={flat.host.picture}
           rating={flat.rating}
         />
-        <Collapse title="Description" text={flat.description}></Collapse>
-        <Collapse title="Équipements" text={flat.equipments}></Collapse>
+        <div className={styles.SectionWrap}>
+          <section className={styles.Section}>
+            <Collapse title="Description" text={flat.description}></Collapse>
+          </section>
+          <section className={styles.Section}>
+            <Collapse title="Équipements" text={flat.equipments}></Collapse>
+          </section>
+        </div>
       </div>
       <Footer />
     </>

@@ -3,12 +3,27 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 6rem 0 6rem;
+  padding: 0 5% 0 5%;
 }
 
-.CardWrap {
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+/*TALETTE*/
+@media screen and (min-width: 768px) {
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
+  .GlobalWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 6rem 0 6rem;
+  }
+
+  .CardWrap {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

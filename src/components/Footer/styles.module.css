@@ -1,17 +1,29 @@
 .FooterWrap {
   background-color: black;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .FooterImg {
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  width: 6rem;
+  width: 35%;
+  padding-top: 15%;
+  padding-bottom: 5%;
 }
 
 .FooterText {
   color: white;
-  margin-bottom: 2rem;
+  font-size: 12px;
+  padding-bottom: 10%;
+}
+
+/*TALETTE*/
+@media screen and (min-width: 768px) {
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
 }

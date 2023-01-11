@@ -1,33 +1,21 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
-import styles from "../Rating/styles.module.css";
+import { TiStar } from "react-icons/ti";
 
 const Rating = (props) => {
   const rating = props.rating;
-  const [rate, setRate] = useState(null);
-  const [hover, setHover] = useState(null);
+  let test = rating.toString();
+  const [rate, setRate] = useState(test);
 
   return (
     <div>
       {[...Array(5)].map((star, i) => {
-        const ratingValue = i + { rating };
+        const ratingValue = i + { test };
         return (
-          <label>
-            <input
-              type="radio"
-              name="rating"
-              className={styles.radio}
-              value={ratingValue}
-              onClick={() => setRate(ratingValue)}
-            />
-            <FaStar
-              className="star"
-              color={ratingValue < (hover || rate) ? "#ff6060" : "#e4e5e9"}
-              size={50}
-              onMouseEnter={() => setHover(ratingValue)}
-              onMouseLeave={() => setHover(null)}
-            />
-          </label>
+          <TiStar
+            className="star"
+            color={ratingValue < rate ? "#ff6060" : "#e4e5e9"}
+            size={20}
+          />
         );
       })}
     </div>

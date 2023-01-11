@@ -20,9 +20,11 @@ function Collapse(props) {
     setToggle(!toggle);
   };
 
+
+
   return (
     <div className={styles.collapseWrap}>
-      <button className={styles.collapseVisible} onClick={toggleState}>
+      <button className={styles.collapseVisible} onClick={() => toggleState()}>
         <span>{title}</span>
         <img src={arrow} alt="arrow" className={toggle && `${styles.active}`} />
       </button>

@@ -7,17 +7,30 @@
 
 .errorTitle {
   color: #ff6060;
-  font-size: 10rem;
+  font-weight: bold;
+  font-size: 96px;
   margin-bottom: 1rem;
 }
 
 .errorText {
   color: #ff6060;
-  font-size: 2.2rem;
+  font-size: 18px;
   margin-bottom: 5rem;
+  text-align: center;
+  margin: 0 1rem 5rem 1rem;
 }
 
 .errorLink {
-  font-size: 1.3rem;
+  font-size: 14px;
   margin-bottom: 5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/*TALETTE*/
+@media screen and (min-width: 768px) {
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
 }

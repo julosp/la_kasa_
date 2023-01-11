@@ -10,7 +10,7 @@ export default function Error() {
       <div className={styles.errorWrap}>
         <h1 className={styles.errorTitle}>404</h1>
         <p className={styles.errorText}>
-          Oups La page que vous demandez n'existe pas.
+          Oups! La page que vous demandez n'existe pas.
         </p>
         <a href="/" className={styles.errorLink}>
           Retourner sur la page d'acceuil
