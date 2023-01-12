@@ -8,6 +8,22 @@
 
 /*TALETTE*/
 @media screen and (min-width: 768px) {
+  .GlobalWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .SectionWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Section {
+    display: flex;
+
+    width: 47%;
+  }
 }
 
 /*DESKTOP*/

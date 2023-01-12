@@ -26,7 +26,9 @@ function Information(props) {
           <p> {hostName} </p>
           <img src={hostPicture} alt="Host" />
         </div>
-        <Rating rating={rating} />
+        <div className={styles.rating}>
+          <Rating rating={rating} />
+        </div>
       </div>
     </section>
   );

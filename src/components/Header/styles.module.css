@@ -31,8 +31,51 @@
 
 /*TALETTE*/
 @media screen and (min-width: 768px) {
+  .HeaderWrap {
+    display: flex;
+    width: auto;
+    padding-top: 1rem;
+  }
+
+  .HeaderWrap a {
+    width: 25%;
+  }
+
+  .HeaderImg {
+    width: 90%;
+  }
+
+  .HeaderNav {
+    justify-content: flex-end;
+  }
+
+  .HeaderNav a {
+    text-align: end;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+  }
 }
 
 /*DESKTOP*/
 @media screen and (min-width: 1024px) {
+  .HeaderWrap {
+    padding: 2rem 6rem 3rem 6rem;
+  }
+  .HeaderNav a {
+    text-align: end;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+  }
+  .HeaderNav {
+    justify-content: flex-end;
+    padding-top: 1%;
+  }
+  .HeaderImg {
+    width: 210px;
+    height: auto;
+  }
 }

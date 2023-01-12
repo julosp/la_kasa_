@@ -57,3 +57,23 @@
   height: 100%;
   margin: 0;
 }
+
+/*TALETTE*/
+@media screen and (min-width: 768px) {
+  .collapseVisible span {
+    font-size: 16px;
+  }
+  .collapseToggle p {
+    font-size: 16px;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 1024px) {
+  .collapseVisible span {
+    font-size: 18px;
+  }
+  .collapseToggle p {
+    font-size: 18px;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+  }
+}
