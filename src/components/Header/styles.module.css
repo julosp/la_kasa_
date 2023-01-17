@@ -64,10 +64,11 @@
     padding: 2rem 6rem 3rem 6rem;
   }
   .HeaderNav a {
+    width: fit-content;
     text-align: end;
     text-transform: capitalize;
     font-size: 24px;
-    margin-left: 2rem;
+    margin-left: 3rem;
     padding-bottom: 1rem;
   }
   .HeaderNav {

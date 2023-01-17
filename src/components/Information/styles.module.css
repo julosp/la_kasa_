@@ -43,6 +43,7 @@
 .infoHost {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .infoHost p {
@@ -50,12 +51,11 @@
   width: 4rem;
   text-align: end;
   width: 50%;
-  margin-right: 0.5rem;
 }
 
 .infoHost img {
   border-radius: 50%;
-  width: 2.5rem;
+  width: 2rem;
 }
 /*TALETTE*/
 @media screen and (min-width: 768px) {
@@ -146,5 +146,4 @@
     border-radius: 50%;
     width: 5.5rem;
   }
-
 }

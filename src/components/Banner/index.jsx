@@ -1,22 +1,24 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import styles from "../Banner/styles.module.css";
 
 function Banner(props) {
   const img = props.img;
   const text = props.text;
 
-  let switchStyle = () => {
-    if (window.location.href.indexOf("aboutus")) {
-      return true;
+  const location = useLocation();
+  const [className, setClassName] = useState(styles.TitleWrap);
+
+  useEffect(() => {
+    if (location.pathname === "/aboutus") {
+      setClassName(styles.aboutus);
+    } else {
+      setClassName(styles.TitleWrap);
     }
-  };
+  }, [location]);
 
   return (
-    <div
-      className={
-        switchStyle === true ? styles.TitleWrapAboutUs : styles.TitleWrap
-      }
-    >
+    <div className={className}>
       <img className={styles.TitleImg} src={img} alt="Banner" />
       <p className={styles.TitleText}> {text} </p>
     </div>

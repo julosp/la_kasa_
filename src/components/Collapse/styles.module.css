@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 7%;
 }
 
 .collapseVisible {
@@ -47,33 +48,54 @@
 .animated {
   opacity: 1;
   transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+  width: 100%;
 }
 
-.collapseToggle p {
-  padding: 0.4rem 1rem 0.4rem 1rem;
+.collapseToggle {
   line-height: 1.5;
   color: #ff6060;
   font-size: 12px;
   height: 100%;
   margin: 0;
 }
+ul {
+  list-style: none;
+}
+.collapseToggle ul {
+  width: fit-content;
+  padding-left: 2%;
+}
 
+.collapseToggle p {
+  width: fit-content;
+  padding-left: 2%;
+}
 /*TALETTE*/
 @media screen and (min-width: 768px) {
+  .collapseWrap {
+    margin-bottom: 3%;
+  }
   .collapseVisible span {
     font-size: 16px;
   }
   .collapseToggle p {
     font-size: 16px;
   }
+  .collapseToggle ul {
+    font-size: 16px;
+  }
 }
 /*DESKTOP*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   .collapseVisible span {
     font-size: 18px;
   }
   .collapseToggle p {
     font-size: 18px;
     padding: 2rem 1.5rem 2rem 1.5rem;
+  }
+  .collapseWrap {
+    width: 90%;
+    margin-bottom: 1%;
   }
 }

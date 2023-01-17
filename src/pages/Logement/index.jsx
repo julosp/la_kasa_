@@ -1,4 +1,5 @@
 import React from "react";
+
 import data from "../../components/data/logement.json";
 import styles from "../Logement/styles.module.css";
 
@@ -7,20 +8,24 @@ import Footer from "../../components/Footer";
 import Slider from "../../components/Slider";
 import Information from "../../components/Information";
 import Collapse from "../../components/Collapse";
+import { useNavigate } from "react-router-dom";
 
 function Logement() {
+  const navigate = useNavigate();
   let id = window.location.pathname.split("/logement/");
   id = id[1];
-
   const flat = data.find((obj) => {
     if (obj.id === id) {
       return obj;
+    } else {
+      navigate("/error");
     }
   });
 
   return (
     <>
       <Header />
+
       <div className={styles.GlobalWrap}>
         <Slider key={id} img={flat.pictures} />
 
@@ -47,3 +52,10 @@ function Logement() {
 }
 
 export default Logement;
+
+/*   const flat = data.find((obj) => {
+    if (obj.id === id) {
+      return obj;
+    } else {
+    }
+  }); */

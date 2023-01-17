@@ -21,6 +21,16 @@ function Collapse(props) {
   };
 
 
+  let content;
+  if(Array.isArray(text) && text.length>0){
+    content = (
+      <ul>
+        {text.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
+    );
+  } else {
+    content = <p>{text}</p>
+  }
 
   return (
     <div className={styles.collapseWrap}>
@@ -37,7 +47,7 @@ function Collapse(props) {
         style={{ height: toggle ? `${heightEl}` : "0px" }}
         ref={refHeight}
       >
-        <p>{text}</p>
+        {content}
       </div>
     </div>
   );
