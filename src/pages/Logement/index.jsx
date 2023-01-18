@@ -1,34 +1,36 @@
+/* REACT AND STYLES IMPORT*/
 import React from "react";
-
-import data from "../../components/data/logement.json";
 import styles from "../Logement/styles.module.css";
-
+/* DATA IMPORT*/
+import data from "../../components/data/logement.json";
+/* COMPONENTS IMPORT*/
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Slider from "../../components/Slider";
 import Information from "../../components/Information";
 import Collapse from "../../components/Collapse";
-import { useNavigate } from "react-router-dom";
 
+/* LOGEMENT PAGE*/
 function Logement() {
-  const navigate = useNavigate();
+  /* GET ID FROM URL*/
   let id = window.location.pathname.split("/logement/");
   id = id[1];
+  /* IF ID FROM URL === ID IN DATA, RETURN THE OBJ ELSE GO TO ERROR PAGE*/
   const flat = data.find((obj) => {
     if (obj.id === id) {
       return obj;
-    } else {
-      navigate("/error");
     }
   });
 
   return (
     <>
+      {/* HEADER*/}
       <Header />
 
       <div className={styles.GlobalWrap}>
+        {/* CAROUSELLE*/}
         <Slider key={id} img={flat.pictures} />
-
+        {/* FLAT INFORMATION*/}
         <Information
           title={flat.title}
           location={flat.location}
@@ -37,6 +39,7 @@ function Logement() {
           picture={flat.host.picture}
           rating={flat.rating}
         />
+        {/* COLLAPSE*/}
         <div className={styles.SectionWrap}>
           <section className={styles.Section}>
             <Collapse title="Description" text={flat.description}></Collapse>
@@ -46,6 +49,7 @@ function Logement() {
           </section>
         </div>
       </div>
+      {/* FOOTER*/}
       <Footer />
     </>
   );

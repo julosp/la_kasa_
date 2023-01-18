@@ -7,6 +7,7 @@ import "normalize.css";
 import "./index.css";
 import "./assets/fonts/Montserrat-VariableFont_wght.ttf";
 
+/*APP RENDER*/
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>

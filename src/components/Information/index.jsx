@@ -1,15 +1,19 @@
+/*REACT AND STYLES IMPORT*/
 import React from "react";
 import styles from "../Information/styles.module.css";
+/*COMPONENTS IMPORT*/
 import Rating from "../Rating/index.jsx";
 
+/*INFORMATION COMPONENTS*/
 function Information(props) {
+  /*GET PROPS*/
   const title = props.title;
   const location = props.location;
   const equipments = props.equipments;
   const hostName = props.name;
   const hostPicture = props.picture;
   const rating = props.rating;
-
+  /*DISPLAY EQUIPMENT AS LIST*/
   const equipmentsList = equipments.map((equipment) => (
     <li key={equipment}>{equipment}</li>
   ));
@@ -35,5 +39,3 @@ function Information(props) {
 }
 
 export default Information;
-
-/*<p>&#9733;</p>*/

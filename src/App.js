@@ -5,6 +5,8 @@ import Logement from "./pages/Logement";
 import AboutUs from "./pages/About";
 import Error from "./components/Error";
 
+
+/*APP ROUTE */
 function App() {
   return (
     <Routes>
@@ -13,7 +15,6 @@ function App() {
       <Route path="aboutus" element={<AboutUs />} />
       <Route path="*" element={<Error />} />
       <Route path="/error" element={<Error />} />
-      <Route path="/logement/*" element={<Error />} />
     </Routes>
   );
 }

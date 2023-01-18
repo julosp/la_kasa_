@@ -1,7 +1,9 @@
+/*REACT, LOGO AND STYLES IMPORT*/
 import React from "react";
 import logo from "../../assets/img/logo_white.png";
 import styles from "../Footer/styles.module.css";
 
+/*FOOTER COMPONENTS*/
 function Footer() {
   return (
     <footer className={styles.FooterWrap}>

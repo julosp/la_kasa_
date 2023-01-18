@@ -1,7 +1,8 @@
+/*LINK AND STYLES IMPORT*/
 import { Link } from "react-router-dom";
-
 import styles from "../Card/styles.module.css";
 
+/*CARD COMPONENTS*/
 function Card({ id, cover, title }) {
   return (
     <div className={styles.CardDiv}>

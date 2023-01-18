@@ -1,8 +1,11 @@
+/*REACT AND STYLES IMPORT*/
 import React from "react";
 import styles from "../Error/styles.module.css";
+/*COMPONENTS IMPORT*/
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+/*ERROR PAGE*/
 export default function Error() {
   return (
     <>
