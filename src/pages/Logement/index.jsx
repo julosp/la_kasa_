@@ -3,6 +3,8 @@ import React from "react";
 import styles from "../Logement/styles.module.css";
 /* DATA IMPORT*/
 import data from "../../components/data/logement.json";
+/* ERROR IMPORT*/
+import Error from "../Error/";
 /* COMPONENTS IMPORT*/
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -13,15 +15,12 @@ import Collapse from "../../components/Collapse";
 /* LOGEMENT PAGE*/
 function Logement() {
   /* GET ID FROM URL*/
+  const flatData = data;
   let id = window.location.pathname.split("/logement/");
   id = id[1];
-  /* IF ID FROM URL === ID IN DATA, RETURN THE OBJ ELSE GO TO ERROR PAGE*/
-  const flat = data.find((obj) => {
-    if (obj.id === id) {
-      return obj;
-    }
-  });
-
+  /* IF ID FROM URL === ID IN DATA, RETURN THE ITEM ELSE GO TO ERROR PAGE*/
+  const flat = flatData.find((item) => item.id === id);
+  if (!flat) return <Error />;
   return (
     <>
       {/* HEADER*/}
@@ -57,9 +56,8 @@ function Logement() {
 
 export default Logement;
 
-/*   const flat = data.find((obj) => {
+/*const flat = data.find((obj) => {
     if (obj.id === id) {
       return obj;
-    } else {
     }
-  }); */
+  });*/
