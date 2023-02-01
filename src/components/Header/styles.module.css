@@ -28,6 +28,9 @@
   width: fit-content;
   justify-content: space-between;
 }
+.active {
+  text-decoration: underline;
+}
 
 /*TALETTE*/
 @media screen and (min-width: 768px) {
@@ -56,6 +59,9 @@
     margin-left: 2rem;
     padding-bottom: 1rem;
   }
+  .active {
+    text-decoration: underline;
+  }
 }
 
 /*DESKTOP*/
@@ -78,5 +84,8 @@
   .HeaderImg {
     width: 210px;
     height: auto;
+  }
+  .active {
+    text-decoration: underline;
   }
 }
