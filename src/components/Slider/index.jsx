@@ -1,5 +1,5 @@
 /*REACT, ARROW AND STYLES IMPORT*/
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../Slider/styles.module.css";
 import arrow from "../../assets/img/arrow.png";
 /*SLIDER COMPONENTS*/
@@ -10,6 +10,17 @@ function Slider(props) {
   let [currImg, setCurrImg] = useState(0);
   /*SET EVENT*/
   let event = true;
+
+  const [uniqueImg, setUniqueImg] = useState(false);
+  useEffect(function imgCounter() {
+    if (image.length === 1) {
+      console.log("true");
+      setUniqueImg(true);
+    } else {
+      console.log("false");
+    }
+  });
+
   /*HANDLE CLICK ON LEFT ARROW*/
   const handleclickLeft = (e) => {
     /*IF USER ON FIRST IMAGE AND CLICK ON LEFT ARROW, DISPLAY LAST IMAGE OF ARRAY*/
@@ -35,28 +46,35 @@ function Slider(props) {
 
   return (
     <section className={styles.carouselWrap}>
-      <div
-        className={styles.carouselInner}
-        style={{ backgroundImage: `url(${image[currImg]})` }}
-      >
+      {uniqueImg ? (
         <div
-          className={styles.leftArrow}
-          onClick={event ? handleclickLeft : undefined}
-        >
-          <img src={arrow} alt="left" />
-        </div>
-        <div className={styles.carouselCounter}>
-          <p>
-            {currImg + 1} / {image.length}
-          </p>
-        </div>
+          className={styles.carouselInner}
+          style={{ backgroundImage: `url(${image[currImg]})` }}
+        ></div>
+      ) : (
         <div
-          className={styles.rightArrow}
-          onClick={event ? handleclickRight : undefined}
+          className={styles.carouselInner}
+          style={{ backgroundImage: `url(${image[currImg]})` }}
         >
-          <img src={arrow} alt="left" />
+          <div
+            className={styles.leftArrow}
+            onClick={event ? handleclickLeft : undefined}
+          >
+            <img src={arrow} alt="left" />
+          </div>
+          <div className={styles.carouselCounter}>
+            <p>
+              {currImg + 1} / {image.length}
+            </p>
+          </div>
+          <div
+            className={styles.rightArrow}
+            onClick={event ? handleclickRight : undefined}
+          >
+            <img src={arrow} alt="left" />
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
